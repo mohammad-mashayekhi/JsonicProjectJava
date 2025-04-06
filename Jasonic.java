@@ -33,7 +33,25 @@ public class Jasonic{
             String type = matcher.group(2);
             String parameters = matcher.group(3);
             String body = matcher.group(4);
-            
+
+            switch(command) {
+                case "create":
+                    System.out.println("Command is an integer type.");
+                    break;
+                case "update":
+                    System.out.println("Command is a void type.");
+                    break;
+                case "create":
+                    System.out.println("Command is a string type.");
+                    break;
+                case "create":
+                    System.out.println("Command is a boolean type.");
+                    break;
+                default:
+                    System.out.println("Unknown command type.");
+                    break;
+            }
+
             // System.out.println("command: " + command);
             // System.out.println("type: " + type);
             // System.out.println("Parameters: " + parameters);
