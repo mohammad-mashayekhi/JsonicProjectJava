@@ -11,7 +11,7 @@ public class Jasonic{
     public void run() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.print("Enter command: ");
+            System.out.print("Enter command please: ");
             String input = scanner.nextLine().trim();;
             if (input.equalsIgnoreCase("quit")) {
                 System.out.println("Exiting...");
@@ -57,7 +57,14 @@ public class Jasonic{
         } else {
             System.out.println("Template Command Incorrect!");
         }
+    }
 
-        // System.out.println("Processing command: " + command);
+
+    public void println(){
+        System.out.println("jasonic");
+    }
+
+    public String toString(){
+        return "jasonic";
     }
 }
