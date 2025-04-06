@@ -36,28 +36,26 @@ public class Jasonic{
 
             switch(command) {
                 case "create":
-                    System.out.println("Command is an integer type.");
+                    System.out.println("Command is an create type.");
+                    break;
+                case "insert":
+                    System.out.println("Command is a insert type.");
                     break;
                 case "update":
-                    System.out.println("Command is a void type.");
+                    System.out.println("Command is a update type.");
                     break;
-                case "create":
-                    System.out.println("Command is a string type.");
+                case "search":
+                    System.out.println("Command is a search type.");
                     break;
-                case "create":
-                    System.out.println("Command is a boolean type.");
+                case "delete":
+                    System.out.println("Command is a delete type.");
                     break;
                 default:
                     System.out.println("Unknown command type.");
                     break;
             }
-
-            // System.out.println("command: " + command);
-            // System.out.println("type: " + type);
-            // System.out.println("Parameters: " + parameters);
-            // System.out.println("Body: " + body);
         } else {
-            System.out.println("No match found.");
+            System.out.println("Template Command Incorrect!");
         }
 
         // System.out.println("Processing command: " + command);
