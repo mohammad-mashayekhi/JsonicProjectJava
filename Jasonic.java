@@ -24,10 +24,9 @@ public class Jasonic{
 
     public void processCommand(String input) {
 
-        String commandLine = "int sum         (int a, int b) { return a + b; }";
-
         Pattern pattern = Pattern.compile("^(\\w+)\\s+(\\w+)(\\s*\\(.*\\))?\\s*\\{(.*)\\}$");
-        Matcher matcher = pattern.matcher(commandLine);
+        Matcher matcher = pattern.matcher(input);
+        
         if (matcher.find()) {
             String command = matcher.group(1);
             String type = matcher.group(2);
@@ -36,19 +35,19 @@ public class Jasonic{
 
             switch(command) {
                 case "create":
-                    System.out.println("Command is an create type.");
+                    createDatatype(type, body);
                     break;
                 case "insert":
-                    System.out.println("Command is a insert type.");
+                    createDatatype(type, body);
                     break;
                 case "update":
-                    System.out.println("Command is a update type.");
+                    updateData(type, parameters, body);
                     break;
                 case "search":
-                    System.out.println("Command is a search type.");
+                    searchData(type, parameters);
                     break;
                 case "delete":
-                    System.out.println("Command is a delete type.");
+                    deleteData(type, parameters);
                     break;
                 default:
                     System.out.println("Unknown command type.");
@@ -59,6 +58,25 @@ public class Jasonic{
         }
     }
 
+    private void createDatatype(String typeName , String jason ){
+        System.out.println("createDatatype type: ");
+    }
+
+    private void insertData(String typeName , String jason ){
+        System.out.println("insertData type: ");
+    }
+
+    private void updateData(String typeName , String parameters , String jason ){
+        System.out.println("updateData type: ");
+    }
+
+    private void searchData(String typeName , String parameters ){
+        System.out.println("searchData type: ");
+    }
+
+    private void deleteData(String typeName , String parameters ){
+        System.out.println("deleteData type: ");
+    }
 
     public void println(){
         System.out.println("jasonic");
