@@ -1,0 +1,26 @@
+
+create Person { "id": "int required unique", "name": "string required", "email": "string unique", "age": "int", "isStudent": "bool" }
+
+insert Person { "id": "1", "name": "Ali", "email": "ali@mail.com", "age": "25", "isStudent": "true" }
+insert Person { "id": "2", "name": "Sara", "email": "sara@mail.com", "age": "19", "isStudent": "false" }
+insert Person { "id": "3", "name": "Ali", "email": "ali2@mail.com", "age": "30", "isStudent": "true" }
+       
+search Person
+search Person (name = "Ali")
+search Person (age > 20)
+search Person (age < 25)
+
+update Person (id = 2) { "age": "21", "isStudent": "true" }
+update Person (name = "Ali") { "email": "ali_updated@mail.com" }
+update Person (age > 25) { "isStudent": "false" }
+update Person (name = "Sara", isStudent = "false") { "isStudent": "true", "age": "22" }
+
+delete Person (id = 3)
+delete Person (name = "Ali")
+delete Person (age < 20)
+delete Person (isStudent = "false")
+
+
+
+///for advanced
+search Person (name = "Ali", age > 23)
